@@ -1,0 +1,20 @@
+/* .password {
+  display: flex;
+  justify-content: space-between;
+} */
+.popup-body {
+}
+
+.popup-body button {
+  padding: 0.8rem 1.5rem;
+  background-color: var(--button-hover-color);
+  border: 1px solid #fff;
+  color: #fff;
+  font-size: 1.2rem;
+  border-radius: 0.5rem;
+  margin-left: auto;
+  transition: 0.5s all;
+}
+.popup-body button:hover {
+  background-color: rgb(32, 32, 32);
+}

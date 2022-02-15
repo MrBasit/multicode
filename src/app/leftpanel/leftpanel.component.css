@@ -1,0 +1,16 @@
+#leftpanel {
+  /* border: 1px solid red; */
+  height: 100vh;
+  width: 100%;
+  background-color: var(--primary-color);
+  display: flex;
+}
+sidebarcontrols {
+  border-right: 2px solid var(--border-color);
+  width: 20%;
+  padding: 12px;
+}
+sidebarcomponent {
+  border-right: 2px solid var(--border-color);
+  width: 80%;
+}

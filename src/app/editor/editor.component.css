@@ -1,0 +1,15 @@
+/* editor */
+#editor {
+  height: 100%;
+  width: 100%;
+  padding: 12px 30px;
+}
+#editor li {
+  color: var(--secondary-color);
+  font-size: 12px;
+}
+#editor li span {
+  color: blue;
+  font-style: italic;
+  text-decoration-line: underline;
+}
