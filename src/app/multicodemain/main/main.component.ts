@@ -14,5 +14,6 @@ export class MainComponent implements OnInit {
       lineNumbers: true,
       mode: 'javascript',
     });
+    console.log(mcm);
   }
 }

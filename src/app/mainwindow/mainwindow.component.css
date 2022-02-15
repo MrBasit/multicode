@@ -1,0 +1,15 @@
+#appcomponent {
+  background-color: rgb(243, 242, 242);
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+/* left panel */
+#leftpanel {
+  width: 25%;
+}
+/* main panel */
+#mainpanel {
+  width: 75%;
+}

@@ -15,6 +15,10 @@ import { TabsComponent } from './tabs/tabs.component';
 import { StartPopupComponent } from './popups/start-popup/start-popup.component';
 import { SignUpComponent } from './popups/sign-up/sign-up.component';
 import { ImportPopupComponent } from './popups/create/import-popup/import-popup.component';
+import { MainwindowComponent } from './mainwindow/mainwindow.component';
+import { RouterModule } from '@angular/router';
+import { CreateTeamComponent } from './create-team/create-team.component';
+import { JoinTeamComponent } from './join-team/join-team.component';
 
 @NgModule({
   declarations: [
@@ -31,12 +35,21 @@ import { ImportPopupComponent } from './popups/create/import-popup/import-popup.
     TabsComponent,
     StartPopupComponent,
     SignUpComponent,
-    ImportPopupComponent
+    ImportPopupComponent,
+    MainwindowComponent,
+    CreateTeamComponent,
+    JoinTeamComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot([
+      { path: 'start', component: StartPopupComponent },
+      { path: 'create', component: CreateTeamComponent },
+      { path: 'join', component: JoinTeamComponent },
+      { path: 'editor', component: MainwindowComponent },
+    ]),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

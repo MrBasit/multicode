@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-start-popup',
-  templateUrl: './start-popup.component.html',
-  styleUrls: ['./start-popup.component.css'],
+  selector: 'app-join-team',
+  templateUrl: './join-team.component.html',
+  styleUrls: ['./join-team.component.css'],
 })
-export class StartPopupComponent implements OnInit {
+export class JoinTeamComponent implements OnInit {
   constructor(private router: Router) {}
 
   ngOnInit(): void {
@@ -18,10 +18,9 @@ export class StartPopupComponent implements OnInit {
       this.router.navigate(['/editor']);
     }
   }
-  CreateTeam() {
-    this.router.navigate(['/create']);
-  }
   JoinTeam() {
-    this.router.navigate(['/join']);
+    //call the api to join the team and save information in local storage
+
+    this.router.navigate(['/editor']);
   }
 }
