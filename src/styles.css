@@ -1,1 +1,119 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  --primary-color: rgb(32, 32, 32);
+  --secondary-color: #fff;
+  --border-color: #000;
+  --button-hover-color: rgb(58, 58, 58);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Urbanist", sans-serif;
+  /* display: none; */
+}
+
+/* global styling */
+/* fonts style */
+
+/* icons */
+i {
+  color: #fff;
+  font-size: 24px;
+  margin: 20px 0;
+}
+/* headings, para,  */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
+  color: #fff;
+}
+
+button {
+  background-color: var(--secondary-color);
+  padding: 12px;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+}
+footer {
+  color: #fff;
+  font-size: 12px;
+}
+
+/* ****************** */
+/* utility classes*/
+
+/* popup utility classes */
+.start-popup {
+  background-color: var(--primary-color);
+}
+.popup-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.popup-header {
+  flex-direction: center;
+  margin-top: 6rem;
+  font-size: 1.5rem;
+}
+
+.popup-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 36rem;
+}
+
+.popup-body .popup-btn {
+  width: 22rem;
+
+  margin: 0.5rem;
+  border: 1px solid var(--button-hover-color);
+  font-size: 1.4rem;
+  padding: 1.5rem;
+  color: #fff;
+  background-color: var(--primary-color);
+}
+
+.popup-body .popup-btn:hover {
+  background-color: var(--button-hover-color);
+}
+.popup-body button {
+}
+
+.popup-footer {
+  margin: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup div {
+  width: 30rem;
+  margin: 1rem;
+}
+.signup input {
+  width: 33rem;
+  padding: 1.2rem;
+  background-color: var(--button-hover-color);
+  border: 2px solid #fff;
+}
+.signup input[placeholder*="a"] {
+  font-size: 1.5rem;
+  color: #fff;
+  font-family: "Urbanist", sans-serif;
+}

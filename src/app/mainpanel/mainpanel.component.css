@@ -1,0 +1,5 @@
+/* main panel */
+#mainpanel {
+  background-color: var(--primary-color);
+  height: 100vh;
+}

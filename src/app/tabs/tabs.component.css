@@ -1,0 +1,14 @@
+#tabs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 150px;
+  height: 100%;
+  padding: 7px;
+  font-style: italic;
+  border-right: 2px solid var(--border-color);
+  transform: skew(-15deg);
+}
+i {
+  font-size: 12px;
+}
