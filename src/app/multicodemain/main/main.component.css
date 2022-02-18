@@ -1,16 +1,16 @@
 #ControlPanel {
-  background-color: #f4f4f4;
+  /* background-color: #f4f4f4; */
   border: 1px solid #333;
   width: 100%;
   height: 5vh;
 }
 #Editor {
-  background-color: #f4f4f4;
+  /* background-color: #f4f4f4; */
   border: 1px solid #333;
   width: 100%;
   height: 90vh;
   margin-top: 2px;
 }
-#Editor span {
-  color: black !important;
+.CodeMirror-scroll {
+  background-color: #000 !important;
 }

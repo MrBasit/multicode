@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { MainComponent } from './multicodemain/main/main.component';
 import { LeftpanelComponent } from './leftpanel/leftpanel.component';
@@ -42,6 +42,7 @@ import { JoinTeamComponent } from './join-team/join-team.component';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     RouterModule.forRoot([
       { path: 'start', component: StartPopupComponent },
       { path: 'create', component: CreateTeamComponent },
