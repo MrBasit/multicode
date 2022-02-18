@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { TeamsService } from '../services/teams.service';
 
@@ -9,6 +10,13 @@ import { TeamsService } from '../services/teams.service';
 })
 export class CreateTeamComponent implements OnInit {
   constructor(private router: Router, private teamsService: TeamsService) {}
+  teamname: string = '';
+  membername: string = '';
+  // reactive form
+  createTeamForm = new FormGroup({
+    teamName: new FormControl(),
+    memberName: new FormControl(),
+  });
 
   ngOnInit(): void {
     //check the member and team info from local storage
@@ -28,5 +36,11 @@ export class CreateTeamComponent implements OnInit {
     this.teamsService
       .CreateTeam('api/createteam?TeamName=team_app1&CreatedBy=teammember_1')
       .subscribe((r) => console.log(r));
+  }
+
+  // getformdata
+  getDataFormData() {
+    console.log('teamname: ', this.teamname);
+    console.log('membername: ', this.membername);
   }
 }

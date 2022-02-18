@@ -78,8 +78,13 @@ footer {
   width: 36rem;
 }
 
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .popup-body .popup-btn {
-  width: 22rem;
+  width: 16rem;
 
   margin: 0.5rem;
   border: 1px solid var(--button-hover-color);
@@ -92,9 +97,6 @@ footer {
 .popup-body .popup-btn:hover {
   background-color: var(--button-hover-color);
 }
-.popup-body button {
-}
-
 .popup-footer {
   margin: 1rem;
   display: flex;
@@ -108,12 +110,14 @@ footer {
 }
 .signup input {
   width: 33rem;
+  font-size: 1.5rem;
+  color: #fff;
   padding: 1.2rem;
   background-color: var(--button-hover-color);
   border: 2px solid #fff;
-}
-.signup input[placeholder*="a"] {
-  font-size: 1.5rem;
-  color: #fff;
   font-family: "Urbanist", sans-serif;
 }
+/* .signup input[placeholder*="a"] {
+  font-size: 1.5rem;
+  color: #fff;
+} */

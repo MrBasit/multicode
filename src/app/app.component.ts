@@ -10,11 +10,13 @@ export class AppComponent implements OnInit {
   constructor(private router: Router) {}
   ngOnInit(): void {
     //check the member and team info from local storage
-    let isUserAlreadyjoined = false;
+    let isUserAlreadyjoined = true;
 
     if (isUserAlreadyjoined) {
       //already login and has correct team code in local storage
-      this.router.navigate(['/editor']);
+      // this.router.navigate(['/editor']);
+      this.router.navigate(['/create']);
+      this.router.navigate(['/join']);
     } else {
       this.router.navigate(['/start']);
     }
