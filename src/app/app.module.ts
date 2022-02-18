@@ -19,6 +19,7 @@ import { MainwindowComponent } from './mainwindow/mainwindow.component';
 import { RouterModule } from '@angular/router';
 import { CreateTeamComponent } from './create-team/create-team.component';
 import { JoinTeamComponent } from './join-team/join-team.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { JoinTeamComponent } from './join-team/join-team.component';
     JoinTeamComponent,
   ],
   imports: [
+    ReactiveFormsModule,
     BrowserModule,
     RouterModule.forRoot([
       { path: 'start', component: StartPopupComponent },

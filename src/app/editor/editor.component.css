@@ -13,3 +13,6 @@
   font-style: italic;
   text-decoration-line: underline;
 }
+.code-mirror {
+  height: 65vh;
+}

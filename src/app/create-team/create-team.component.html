@@ -1,4 +1,33 @@
-<p style="color: black">create-team works!</p>
-<button style="border: 2px solid black; color: black" (click)="CreateTeam()">
-  Create Team
-</button>
+<div class="start-popup">
+  <div class="popup-container">
+    <div class="popup-header"><h1>Create Team</h1></div>
+    <div class="popup-body">
+      <form [formGroup]="createTeamForm" class="signup">
+        <div class="name">
+          <input
+            formControlName="teamName"
+            [(ngModel)]="teamname"
+            type="text"
+            placeholder="team name"
+          />
+        </div>
+        <div>
+          <input
+            formControlName="memberName"
+            [(ngModel)]="membername"
+            type="text"
+            placeholder="member name"
+          />
+        </div>
+        <div class="btn">
+          <button class="popup-btn" (click)="getDataFormData()">
+            Create Team
+          </button>
+        </div>
+      </form>
+    </div>
+    <div class="popup-footer">
+      <footer>Copyright &copy; Multicode</footer>
+    </div>
+  </div>
+</div>

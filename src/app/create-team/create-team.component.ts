@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -7,6 +8,13 @@ import { Router } from '@angular/router';
   styleUrls: ['./create-team.component.css'],
 })
 export class CreateTeamComponent implements OnInit {
+  teamname: string = '';
+  membername: string = '';
+  // reactive form
+  createTeamForm = new FormGroup({
+    teamName: new FormControl(),
+    memberName: new FormControl(),
+  });
   constructor(private router: Router) {}
 
   ngOnInit(): void {
@@ -23,5 +31,11 @@ export class CreateTeamComponent implements OnInit {
     //call the api to create the team
 
     this.router.navigate(['/editor']);
+  }
+
+  // getformdata
+  getDataFormData() {
+    console.log('teamname: ', this.teamname);
+    console.log('membername: ', this.membername);
   }
 }

@@ -1,4 +1,33 @@
-<p style="color: black">join-team works!</p>
-<button style="border: 2px solid black; color: black" (click)="JoinTeam()">
-  Join Team
-</button>
+<div class="start-popup">
+  <div class="popup-container">
+    <div class="popup-header"><h1>Join Team</h1></div>
+    <div class="popup-body">
+      <form [formGroup]="joinTeamForm" class="signup">
+        <div class="name">
+          <input
+            formControlName="memberName"
+            [(ngModel)]="membername"
+            type="text"
+            placeholder="member name"
+          />
+        </div>
+        <div>
+          <input
+            formControlName="secretNumber"
+            [(ngModel)]="secretnumber"
+            type="text"
+            placeholder="secret number"
+          />
+        </div>
+        <div class="btn">
+          <button class="popup-btn" (click)="getJoinTeamData()">
+            Join Team
+          </button>
+        </div>
+      </form>
+    </div>
+    <div class="popup-footer">
+      <footer>Copyright &copy; Multicode</footer>
+    </div>
+  </div>
+</div>

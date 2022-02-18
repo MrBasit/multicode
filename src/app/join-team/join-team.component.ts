@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -7,6 +8,12 @@ import { Router } from '@angular/router';
   styleUrls: ['./join-team.component.css'],
 })
 export class JoinTeamComponent implements OnInit {
+  membername: string = '';
+  secretnumber: string = '';
+  joinTeamForm = new FormGroup({
+    memberName: new FormControl(),
+    secretNumber: new FormControl(),
+  });
   constructor(private router: Router) {}
 
   ngOnInit(): void {
@@ -22,5 +29,10 @@ export class JoinTeamComponent implements OnInit {
     //call the api to join the team and save information in local storage
 
     this.router.navigate(['/editor']);
+  }
+
+  getJoinTeamData() {
+    console.log('memberName: ', this.membername);
+    console.log('secretNumber: ', this.secretnumber);
   }
 }
