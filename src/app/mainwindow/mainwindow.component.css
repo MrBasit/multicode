@@ -6,10 +6,9 @@
 }
 
 /* left panel */
-#leftpanel {
-  width: 25%;
-}
 /* main panel */
-#mainpanel {
-  width: 75%;
+leftpanel {
+}
+mainpanel {
+  width: 100%;
 }

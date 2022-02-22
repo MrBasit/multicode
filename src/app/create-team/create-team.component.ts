@@ -33,13 +33,15 @@ export class CreateTeamComponent implements OnInit {
     console.log('teamname: ', this.teamname);
     console.log('membername: ', this.membername);
 
-    this.teamsService
-      .CreateTeam(
-        `api/createteam?TeamName=${this.teamname}&CreatedBy=${this.membername}`
-      )
-      .subscribe((r) => {
-        console.log(r);
-        this.router.navigate(['/editor']);
-      });
+    // this.teamsService
+    //   .CreateTeam(
+    //     `api/createteam?TeamName=${this.teamname}&CreatedBy=${this.membername}`
+    //   )
+    //   .subscribe((r) => {
+    //     console.log(r);
+    //     this.router.navigate(['/editor']);
+    //   });
+
+    this.router.navigate(['/editor']);
   }
 }

@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { KeyValuePipe } from '@angular/common';
+import { HtmlAstPath, ParsedEventType } from '@angular/compiler';
+import { Component, HostListener, OnInit } from '@angular/core';
 import 'src/editor/lib/codemirror.js';
 declare const CodeMirror: any;
 @Component({
@@ -8,12 +10,19 @@ declare const CodeMirror: any;
 })
 export class MainComponent implements OnInit {
   constructor() {}
-
+  _codeMirror: any;
   ngOnInit(): void {
-    var mcm = CodeMirror(document.getElementById('Editor'), {
+    this._codeMirror = CodeMirror(document.getElementById('Editor'), {
       lineNumbers: true,
       mode: 'javascript',
     });
-    console.log(mcm);
+  }
+  getEditorValue(event: any) {
+    console.log(this._codeMirror.getValue());
+    event.preventDefault();
+  }
+  sync(event: any) {
+    this._codeMirror.setValue('welcome to the code  room project.');
+    event.preventDefault();
   }
 }

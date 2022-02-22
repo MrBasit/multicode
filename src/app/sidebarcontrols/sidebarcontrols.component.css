@@ -5,3 +5,13 @@
   flex-direction: column;
   justify-content: space-between;
 }
+
+.icons > * {
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  row-gap: 1rem;
+  /* justify-content: space-between; */
+  flex-direction: column;
+}
