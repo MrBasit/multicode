@@ -36,6 +36,10 @@ span {
   color: #fff;
 }
 
+.CodeMirror span {
+  color: black;
+}
+
 button {
   background-color: var(--secondary-color);
   padding: 12px;

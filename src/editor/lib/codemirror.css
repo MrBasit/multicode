@@ -264,7 +264,7 @@ div.CodeMirror span.CodeMirror-nonmatchingbracket {
   height: 100%;
   outline: none; /* Prevent dragging from highlighting the element */
   position: relative;
-  background-color: #555;
+  background-color: #ddd;
 }
 .CodeMirror-sizer {
   position: relative;
@@ -317,7 +317,7 @@ div.CodeMirror span.CodeMirror-nonmatchingbracket {
   display: inline-block;
   vertical-align: top;
   margin-bottom: -50px;
-  background-color: #555;
+  background-color: #ddd;
 }
 .CodeMirror-gutter-wrapper {
   position: absolute;

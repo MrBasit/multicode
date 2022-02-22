@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
+import { MembersService } from '../services/members.service';
+import { TeamsService } from '../services/teams.service';
 
 @Component({
   selector: 'app-join-team',
@@ -14,7 +16,7 @@ export class JoinTeamComponent implements OnInit {
     memberName: new FormControl(),
     secretNumber: new FormControl(),
   });
-  constructor(private router: Router) {}
+  constructor(private router: Router, private membersService: MembersService) {}
 
   ngOnInit(): void {
     //check the member and team info from local storage
@@ -25,14 +27,16 @@ export class JoinTeamComponent implements OnInit {
       this.router.navigate(['/editor']);
     }
   }
+
   JoinTeam() {
-    //call the api to join the team and save information in local storage
-
-    this.router.navigate(['/editor']);
-  }
-
-  getJoinTeamData() {
-    console.log('memberName: ', this.membername);
-    console.log('secretNumber: ', this.secretnumber);
+    this.membersService
+      .JoinTeam(
+        `api/jointeam?SecretNumber=${this.secretnumber}&MemberName=${this.membername}`
+      )
+      .subscribe((r) => {
+        console.log('memberName: ', this.membername);
+        console.log('secretNumber: ', this.secretnumber);
+        this.router.navigate(['/editor']);
+      });
   }
 }
