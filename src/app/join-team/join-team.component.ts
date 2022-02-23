@@ -29,16 +29,16 @@ export class JoinTeamComponent implements OnInit {
   }
 
   JoinTeam() {
-    // this.membersService
-    //   .JoinTeam(
-    //     `api/jointeam?SecretNumber=${this.secretnumber}&MemberName=${this.membername}`
-    //   )
-    //   .subscribe((r) => {
-    //     console.log('memberName: ', this.membername);
-    //     console.log('secretNumber: ', this.secretnumber);
-    //     this.router.navigate(['/editor']);
-    //   });
+    this.membersService
+      .JoinTeam(
+        `api/jointeam?SecretNumber=${this.secretnumber}&MemberName=${this.membername}`
+      )
+      .subscribe((r) => {
+        console.log('memberName: ', this.membername);
+        console.log('secretNumber: ', this.secretnumber);
+        this.router.navigate(['/editor']);
+      });
 
-    this.router.navigate(['/editor']);
+    // this.router.navigate(['/editor']);
   }
 }

@@ -12,4 +12,12 @@ export class TeamsService {
     // let a = environment.URL + url;
     return this.http.post(environment.URL + url, {});
   }
+
+  GetFileContent(url: string, body: {}) {
+    return this.http.post(environment.URL + url, body);
+  }
+
+  UpdateFileContent(url: string, body: {}) {
+    return this.http.post(environment.URL + url, body);
+  }
 }
