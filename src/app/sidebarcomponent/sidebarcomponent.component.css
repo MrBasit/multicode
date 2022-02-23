@@ -7,7 +7,7 @@ span {
   font-size: 12px;
 }
 
-.multicode {
+.coderoom {
   border-bottom: 2px solid var(--border-color);
   padding: 13px;
   width: 100%;
@@ -19,4 +19,13 @@ span {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+input {
+  width: 100%;
+  padding: 0.5rem;
+  background-color: rgb(240, 240, 240);
+  opacity: 0.8;
+}
+.hide {
+  display: none;
 }
