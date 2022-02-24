@@ -11,11 +11,9 @@ export class StartPopupComponent implements OnInit {
   teaminfo: any;
   ngOnInit(): void {
     //check the member and team info from local storage
-    let isUserAlreadyjoined = false;
     this.teaminfo = localStorage.getItem('teaminfo');
+    this.teaminfo = JSON.parse(this.teaminfo);
     if (this.teaminfo) {
-      //already login and has correct team code in local storage
-      let a = JSON.parse(this.teaminfo);
       this.router.navigate(['/editor']);
     }
   }

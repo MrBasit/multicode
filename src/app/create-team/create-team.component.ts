@@ -20,30 +20,20 @@ export class CreateTeamComponent implements OnInit {
   });
 
   ngOnInit(): void {
-    //check the member and team info from local storage
-    let isUserAlreadyjoined = false;
     this.teaminfo = localStorage.getItem('teaminfo');
     if (this.teaminfo) {
-      //already login and has correct team code in local storage
       this.router.navigate(['/editor']);
     }
   }
 
-  // getformdata
   CreateTeam() {
-    console.log('teamname: ', this.teamname);
-    console.log('membername: ', this.membername);
-
     this.teamsService
       .CreateTeam(
         `api/createteam?TeamName=${this.teamname}&CreatedBy=${this.membername}`
       )
       .subscribe((r) => {
-        console.log(r);
         localStorage.setItem('teaminfo', JSON.stringify(r));
         this.router.navigate(['/editor']);
       });
-
-    // this.router.navigate(['/editor']);
   }
 }

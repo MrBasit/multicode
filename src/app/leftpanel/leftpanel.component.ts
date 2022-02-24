@@ -14,7 +14,7 @@ export class LeftpanelComponent implements OnInit {
   ngOnInit(): void {
     this.teamInfoCollaps();
 
-    this.router.navigate(['editor/leftpanel/file']);
+    this.router.navigate(['/editor/leftpanel/file']);
 
     const ele = document.querySelectorAll('sidebarcontrols .icons i');
     ele.forEach((element) => {

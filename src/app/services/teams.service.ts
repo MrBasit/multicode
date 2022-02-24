@@ -20,4 +20,16 @@ export class TeamsService {
   UpdateFileContent(url: string, body: {}) {
     return this.http.post(environment.URL + url, body);
   }
+
+  GetTeamInfo(url: string) {
+    return this.http.get(environment.URL + url);
+  }
+
+  LeaveTeam(url: string) {
+    return this.http.delete(environment.URL + url);
+  }
+
+  CreateFile(url: string, body: {}) {
+    return this.http.post(environment.URL + url, body);
+  }
 }

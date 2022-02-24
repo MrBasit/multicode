@@ -19,26 +19,21 @@ export class JoinTeamComponent implements OnInit {
   constructor(private router: Router, private membersService: MembersService) {}
 
   ngOnInit(): void {
-    //check the member and team info from local storage
-    let isUserAlreadyjoined = false;
-
-    if (isUserAlreadyjoined) {
-      //already login and has correct team code in local storage
+    let teaminfo = localStorage.getItem('teaminfo');
+    if (teaminfo) {
       this.router.navigate(['/editor']);
     }
   }
 
   JoinTeam() {
+    console.log('joining team...');
     this.membersService
       .JoinTeam(
         `api/jointeam?SecretNumber=${this.secretnumber}&MemberName=${this.membername}`
       )
       .subscribe((r) => {
-        console.log('memberName: ', this.membername);
-        console.log('secretNumber: ', this.secretnumber);
+        localStorage.setItem('teaminfo', JSON.stringify(r));
         this.router.navigate(['/editor']);
       });
-
-    // this.router.navigate(['/editor']);
   }
 }

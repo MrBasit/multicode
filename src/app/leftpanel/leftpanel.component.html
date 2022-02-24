@@ -5,10 +5,14 @@
     <!-- top icons -->
     <div class="icons top-icons">
       <div>
-        <a href="#"><i class="far fa-copy" #fasicon></i></a>
+        <a routerLink="/editor/leftpanel/file"
+          ><i class="far fa-copy" #fasicon></i
+        ></a>
       </div>
       <div>
-        <a href="#"><i class="fas fa-user-friends"></i></a>
+        <a routerLink="/editor/leftpanel/team"
+          ><i class="fas fa-user-friends"></i
+        ></a>
       </div>
       <div>
         <a href="#"><i class="fas fa-comments"></i></a>
@@ -29,9 +33,7 @@
     </div>
   </div>
   <!-- <sidebarcontrols> </sidebarcontrols> -->
-
   <!-- <sidebarcomponent></sidebarcomponent> -->
   <!-- <app-teaminfo></app-teaminfo> -->
-
-  <!-- chat comp -->
+  <router-outlet></router-outlet>
 </div>

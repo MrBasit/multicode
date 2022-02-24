@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { TeamsService } from '../services/teams.service';
 
 @Component({
   selector: 'app-teaminfo',
@@ -6,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./teaminfo.component.css'],
 })
 export class TeaminfoComponent implements OnInit {
-  constructor() {}
+  constructor(private teamservice: TeamsService, private router: Router) {}
   teaminfo: any;
   ngOnInit(): void {
     this.teaminfo = {
@@ -41,9 +43,24 @@ export class TeaminfoComponent implements OnInit {
         },
       ],
     };
+    let teaminfostring: any = localStorage.getItem('teaminfo');
+    this.teaminfo = JSON.parse(teaminfostring);
 
+    let url = `api/GetTeamInfo/${this.teaminfo.Team.SecretNumber}/${this.teaminfo.CurrentMember.Name}`;
+    this.teamservice.GetTeamInfo(url).subscribe((r) => {
+      localStorage.setItem('teaminfo', JSON.stringify(r));
+    });
+
+    teaminfostring = localStorage.getItem('teaminfo');
+    this.teaminfo = JSON.parse(teaminfostring);
     console.log(this.teaminfo.Members);
   }
 
-  Info() {}
+  leaveteam() {
+    let url = `api/leaveteam/${this.teaminfo.CurrentMember.Id}`;
+    this.teamservice.LeaveTeam(url).subscribe((r) => {
+      localStorage.removeItem('teaminfo');
+      this.router.navigate(['/start']);
+    });
+  }
 }

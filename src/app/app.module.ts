@@ -63,6 +63,7 @@ import { TeaminfoComponent } from './teaminfo/teaminfo.component';
             children: [
               { path: 'file', component: SidebarcomponentComponent },
               { path: 'test', component: TestComponent },
+              { path: 'team', component: TeaminfoComponent },
             ],
           },
         ],
