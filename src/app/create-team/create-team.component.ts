@@ -12,6 +12,7 @@ export class CreateTeamComponent implements OnInit {
   constructor(private router: Router, private teamsService: TeamsService) {}
   teamname: string = '';
   membername: string = '';
+  teaminfo: any;
   // reactive form
   createTeamForm = new FormGroup({
     teamName: new FormControl(),
@@ -21,8 +22,8 @@ export class CreateTeamComponent implements OnInit {
   ngOnInit(): void {
     //check the member and team info from local storage
     let isUserAlreadyjoined = false;
-
-    if (isUserAlreadyjoined) {
+    this.teaminfo = localStorage.getItem('teaminfo');
+    if (this.teaminfo) {
       //already login and has correct team code in local storage
       this.router.navigate(['/editor']);
     }
@@ -39,6 +40,7 @@ export class CreateTeamComponent implements OnInit {
       )
       .subscribe((r) => {
         console.log(r);
+        localStorage.setItem('teaminfo', JSON.stringify(r));
         this.router.navigate(['/editor']);
       });
 

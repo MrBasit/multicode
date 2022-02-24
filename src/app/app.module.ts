@@ -20,6 +20,7 @@ import { RouterModule } from '@angular/router';
 import { CreateTeamComponent } from './create-team/create-team.component';
 import { JoinTeamComponent } from './join-team/join-team.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { TestComponent } from './test/test.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     MainwindowComponent,
     CreateTeamComponent,
     JoinTeamComponent,
+    TestComponent,
   ],
   imports: [
     ReactiveFormsModule,
@@ -49,7 +51,20 @@ import { ReactiveFormsModule } from '@angular/forms';
       { path: 'start', component: StartPopupComponent },
       { path: 'create', component: CreateTeamComponent },
       { path: 'join', component: JoinTeamComponent },
-      { path: 'editor', component: MainwindowComponent },
+      {
+        path: 'editor',
+        component: MainwindowComponent,
+        children: [
+          {
+            path: 'leftpanel',
+            component: LeftpanelComponent,
+            children: [
+              { path: 'file', component: SidebarcomponentComponent },
+              { path: 'test', component: TestComponent },
+            ],
+          },
+        ],
+      },
     ]),
   ],
   providers: [],

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'leftpanel',
@@ -6,9 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./leftpanel.component.css'],
 })
 export class LeftpanelComponent implements OnInit {
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit(): void {
+    this.router.navigate(['editor/leftpanel/file']);
+
     const ele = document.querySelectorAll('sidebarcontrols .icons i');
     ele.forEach((element) => {
       element.addEventListener('click', function (event) {

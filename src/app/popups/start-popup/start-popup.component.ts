@@ -8,13 +8,14 @@ import { Router } from '@angular/router';
 })
 export class StartPopupComponent implements OnInit {
   constructor(private router: Router) {}
-
+  teaminfo: any;
   ngOnInit(): void {
     //check the member and team info from local storage
     let isUserAlreadyjoined = false;
-
-    if (isUserAlreadyjoined) {
+    this.teaminfo = localStorage.getItem('teaminfo');
+    if (this.teaminfo) {
       //already login and has correct team code in local storage
+      let a = JSON.parse(this.teaminfo);
       this.router.navigate(['/editor']);
     }
   }
