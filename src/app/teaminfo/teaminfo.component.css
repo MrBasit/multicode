@@ -1,0 +1,12 @@
+h4 {
+  display: inline;
+}
+.teaminformation {
+  padding: 1rem;
+}
+.teaminformation > div {
+  margin-bottom: 2rem;
+}
+.teammembers {
+  margin-bottom: 1rem;
+}

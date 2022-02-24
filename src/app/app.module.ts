@@ -21,6 +21,7 @@ import { CreateTeamComponent } from './create-team/create-team.component';
 import { JoinTeamComponent } from './join-team/join-team.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { TestComponent } from './test/test.component';
+import { TeaminfoComponent } from './teaminfo/teaminfo.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { TestComponent } from './test/test.component';
     CreateTeamComponent,
     JoinTeamComponent,
     TestComponent,
+    TeaminfoComponent,
   ],
   imports: [
     ReactiveFormsModule,

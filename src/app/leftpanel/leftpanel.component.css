@@ -9,12 +9,21 @@ sidebarcontrols {
   border-right: 2px solid var(--border-color);
   padding: 12px;
 }
-sidebarcomponent {
-  border-right: 2px solid var(--border-color);
-  width: 0;
-  transition: 0.5s;
-  overflow: hidden;
+/* sidebarcontorls */
+#sidebarcontrols {
+  padding: 1rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-sidebarcomponent.active {
-  width: 18rem;
+
+.icons > * {
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  row-gap: 1rem;
+  /* justify-content: space-between; */
+  flex-direction: column;
 }

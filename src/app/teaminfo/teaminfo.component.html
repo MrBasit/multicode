@@ -1,0 +1,46 @@
+<div id="sidebarcomponent">
+  <div class="teaminformation">
+    <div class="aboutme">
+      <h2>About Me</h2>
+      <h4>ID:&nbsp;</h4>
+      <span>{{ teaminfo.CurrentMember.Id }}</span>
+      <br />
+      <h4>Name:&nbsp;</h4>
+      <span>{{ teaminfo.CurrentMember.Name }}</span>
+      <br />
+      <h4>TeamID:&nbsp;</h4>
+      <span>{{ teaminfo.CurrentMember.TeamId }}</span>
+    </div>
+    <div class="aboutteam">
+      <h2>About Team</h2>
+      <h4>ID:&nbsp;</h4>
+      <span>{{ teaminfo.Team.Id }}</span>
+      <br />
+      <h4>Teamname:&nbsp;</h4>
+      <span>{{ teaminfo.Team.TeamName }}</span>
+      <br />
+      <h4>Secret Number:&nbsp;</h4>
+      <span>{{ teaminfo.Team.SecretNumber }}</span>
+      <br />
+      <h4>Folder Path:&nbsp;</h4>
+      <span>{{ teaminfo.Team.FolderPath }}</span>
+      <br />
+    </div>
+    <div class="teammembers">
+      <h2>Other Member</h2>
+      <ul>
+        <li *ngFor="let item of teaminfo.Members" class="teammembers">
+          <h4>ID:&nbsp;</h4>
+          <span>{{ item.Id }}</span>
+          <br />
+          <h4>Name:&nbsp;</h4>
+          <span>{{ item.Name }}</span>
+          <br />
+          <h4>TeamID:&nbsp;</h4>
+          <span>{{ item.TeamId }}</span>
+          <br />
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
