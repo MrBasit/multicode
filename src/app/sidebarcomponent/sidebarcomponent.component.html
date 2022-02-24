@@ -3,9 +3,9 @@
   <div class="coderoom">
     <h3>CodeRoom</h3>
     <div class="content">
-      <span
+      <!-- <span
         >C:User/Desktop/ <span><i class="fas fa-folder"></i></span
-      ></span>
+      ></span> -->
       <div (click)="showHide()">
         <i class="fas fa-plus"></i>
       </div>
@@ -17,6 +17,13 @@
       <form [formGroup]="files">
         <input type="text" formControName="newFile" class="form-control" />
       </form>
+    </div>
+    <div class="files">
+      <ul>
+        <li *ngFor="let file of currentFiles">
+          <div (click)="getFileValue($event)" #fileName>{{ file }}</div>
+        </li>
+      </ul>
     </div>
   </div>
 </div>

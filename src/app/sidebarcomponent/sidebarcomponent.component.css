@@ -17,7 +17,7 @@ span {
 }
 .content {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
 }
 input {
@@ -28,4 +28,19 @@ input {
 }
 .hide {
   display: none;
+}
+.filepanel ul li {
+  color: white;
+  list-style: none;
+}
+.filepanel .files {
+  margin-top: 1rem;
+}
+.files ul li {
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  width: 100%;
+}
+.files ul li:hover {
+  background-color: rgba(129, 129, 129, 0.1);
 }
