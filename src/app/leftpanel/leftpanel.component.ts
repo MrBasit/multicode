@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { SidebarcontrolsComponent } from '../sidebarcontrols/sidebarcontrols.component';
 
 @Component({
   selector: 'leftpanel',
@@ -6,16 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./leftpanel.component.css'],
 })
 export class LeftpanelComponent implements OnInit {
+  collapse = false;
   constructor() {}
 
   ngOnInit(): void {
-    const ele = document.querySelectorAll('sidebarcontrols .icons i');
-    ele.forEach((element) => {
-      element.addEventListener('click', function (event) {
-        let sidebar = document.querySelector('sidebarcomponent');
-        sidebar?.classList.toggle('active');
-        event.preventDefault();
-      });
-    });
+    this.teamInfoCollaps();
+  }
+
+  teamInfoCollaps() {
+    this.collapse = !this.collapse;
   }
 }

@@ -55,6 +55,18 @@ footer {
 /* utility classes*/
 
 /* popup utility classes */
+
+/* leftpanel  component */
+#sidebarcomponent {
+  border-right: 2px solid var(--border-color);
+  width: 18rem;
+  height: 100vh;
+  transition: 0.5s;
+  overflow: hidden;
+}
+#sidebarcomponent.show {
+  width: 18rem;
+}
 .start-popup {
   background-color: var(--primary-color);
 }

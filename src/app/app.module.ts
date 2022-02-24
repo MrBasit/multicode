@@ -20,6 +20,7 @@ import { RouterModule } from '@angular/router';
 import { CreateTeamComponent } from './create-team/create-team.component';
 import { JoinTeamComponent } from './join-team/join-team.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { TeaminfoComponent } from './teaminfo/teaminfo.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     MainwindowComponent,
     CreateTeamComponent,
     JoinTeamComponent,
+    TeaminfoComponent,
   ],
   imports: [
     ReactiveFormsModule,
