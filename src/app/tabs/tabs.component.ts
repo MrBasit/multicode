@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HelperService } from '../services/helper.service';
 
 @Component({
   selector: 'tabs',
@@ -6,7 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tabs.component.css'],
 })
 export class TabsComponent implements OnInit {
-  constructor() {}
+  tabtitle: string;
+  constructor(private helperservice: HelperService) {
+    helperservice.filechangeEmitted$.subscribe((r) => {
+      this.tabtitle = r;
+    });
+  }
 
   ngOnInit(): void {}
 }

@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  // URL: 'http://multicode/',
-  URL: 'https://localhost:44337/',
+  URL: 'http://multicode/',
+  // URL: 'https://localhost:44337/',
 };
 /*
  * For easier debugging in development mode, you can import the following file

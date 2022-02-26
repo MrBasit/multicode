@@ -32,4 +32,8 @@ export class TeamsService {
   CreateFile(url: string, body: {}) {
     return this.http.post(environment.URL + url, body);
   }
+
+  GetDirectoryStructure(url: string, body: {}) {
+    return this.http.post(environment.URL + url, body);
+  }
 }

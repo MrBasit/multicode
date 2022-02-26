@@ -22,6 +22,7 @@ import { JoinTeamComponent } from './join-team/join-team.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { TestComponent } from './test/test.component';
 import { TeaminfoComponent } from './teaminfo/teaminfo.component';
+import { CloseComponent } from './close/close.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { TeaminfoComponent } from './teaminfo/teaminfo.component';
     JoinTeamComponent,
     TestComponent,
     TeaminfoComponent,
+    CloseComponent,
   ],
   imports: [
     ReactiveFormsModule,
@@ -64,6 +66,7 @@ import { TeaminfoComponent } from './teaminfo/teaminfo.component';
               { path: 'file', component: SidebarcomponentComponent },
               { path: 'test', component: TestComponent },
               { path: 'team', component: TeaminfoComponent },
+              { path: 'close', component: CloseComponent },
             ],
           },
         ],

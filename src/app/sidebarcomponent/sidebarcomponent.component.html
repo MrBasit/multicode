@@ -15,13 +15,19 @@
   <div class="filepanel">
     <div [ngClass]="{ hide: !show }" class="form">
       <form [formGroup]="files">
-        <input type="text" formControName="newFile" class="form-control" />
+        <input
+          #input
+          type="text"
+          formControName="newFile"
+          class="form-control"
+          (keyup.enter)="CreateFile(input)"
+        />
       </form>
     </div>
     <div class="files">
       <ul>
         <li *ngFor="let file of currentFiles">
-          <div (click)="getFileValue($event)" #fileName>{{ file }}</div>
+          <div (click)="getFileValue(fileName)" #fileName>{{ file }}</div>
         </li>
       </ul>
     </div>
